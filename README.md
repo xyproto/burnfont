@@ -6,13 +6,15 @@ Here is a generated image with all available letters in this font:
 
 ![letters](img/letters.png)
 
-Here is the same version, but scaled up 4x:
+Here is the same image, but scaled up 4x:
 
 ![scaled](img/scaled.png)
 
 The font is a bit nostalgic to me, and was used in my small DOS drawing program name *Burn*, that looked like this:
 
 ![burn screenshot](img/burn.png)
+
+(The palette that came with *Burn* is [available here](https://github.com/xyproto/burnpalette)).
 
 The font definition looks like this:
 
