@@ -10,6 +10,20 @@ Here is an image with all available letters:
 
 Notice the oh-so-smooth transparent pixels at the corners of the letters.
 
+The font definition looks like this:
+
+```go
+	case 'k':
+		plotFontLine("***", x, y, m, r, g, b)
+		plotFontLine("-**", x, y+1, m, r, g, b)
+		plotFontLine("**-**", x+1, y+2, m, r, g, b)
+		plotFontLine("****-", x+1, y+3, m, r, g, b)
+		plotFontLine("-**-**", x, y+4, m, r, g, b)
+		plotFontLine("*** **", x, y+5, m, r, g, b)
+```
+
+The `*` is an opaque pixel, while the `-` is a 25% transparent one.
+
 ## Go package
 
 This Go package has a slice `Available` that lists all available runes. There is also a 'Draw' function that takes an `*image.RGBA` value, a rune, a position (x and y) and a color (r, g and b) and draws a letter at that position in the image. The letters are 6x6, with the exception of `*`, which is weird.
