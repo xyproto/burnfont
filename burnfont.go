@@ -1,4 +1,4 @@
-package rune2image
+package burnfont
 
 import (
 	"errors"

@@ -1,5 +1,5 @@
-module github.com/xyproto/rune2image
+module github.com/xyproto/burnfont
 
-go 1.13
+go 1.11
 
 require golang.org/x/image v0.0.0-20191009234506-e7c1f5e7dbb8

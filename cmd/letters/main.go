@@ -3,7 +3,7 @@ package main
 import (
 	"flag"
 	"fmt"
-	"github.com/xyproto/rune2image"
+	"github.com/xyproto/burnfont"
 	"image"
 	"image/color"
 	"image/draw"
@@ -64,13 +64,13 @@ func main() {
 		b byte
 		i int
 	)
-	alen := len(rune2image.Available)
+	alen := len(burnfont.Available)
 OUT:
 	for y := 0; y < 100; y += 8 {
 		for x := 0; x < 100; x += 8 {
 			// Convert the image to only use the given palette
-			l := rune2image.Available[i]
-			if err = rune2image.Draw(m, l, x, y, r, g, b); err != nil {
+			l := burnfont.Available[i]
+			if err = burnfont.Draw(m, l, x, y, r, g, b); err != nil {
 				fmt.Fprintf(os.Stderr, "error: %s\n", err)
 				os.Exit(1)
 			}
