@@ -2,10 +2,6 @@
 
 This is a hand-crafted 6x6 pixel font, defined by code, created in 1997.
 
-It's a bit nostalgic to me, and was used in my small DOS drawing program name *Burn*, that looked like this:
-
-![burn screenshot](img/burn.png)
-
 Here is a generated image with all available letters in this font:
 
 ![letters](img/letters.png)
@@ -13,6 +9,10 @@ Here is a generated image with all available letters in this font:
 Here is the same version, but scaled up 4x:
 
 ![scaled](img/scaled.png)
+
+The font is a bit nostalgic to me, and was used in my small DOS drawing program name *Burn*, that looked like this:
+
+![burn screenshot](img/burn.png)
 
 The font definition looks like this:
 
