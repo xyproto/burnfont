@@ -1,13 +1,32 @@
-# rune2image
+# burnfont
 
-For a given rune, output an image. Only supports a subset of all available characters.
+This is a hand-crafted programmatic font, created in 1997. It's a bit nostalgic to me, and was used in my DOS drawing program "Burn":
 
-## Example output
+![burn screenshot](img/burn.png)
 
-The output image from the `cmd/scaled` utility, using this command:
-
-    ./scaled > letters.png
+Here is an image with all available letters:
 
 ![letters](img/letters.png)
 
-I made this font by hand in 1997, so it's a bit nostalgic to me. It's designed to work well in a resolution of `320x200`.
+Notice the oh-so-smooth transparent pixels at the corners of the letters.
+
+## Go package
+
+This Go package has a slice `Available` that lists all available runes. There is also a 'Draw' function that takes an `*image.RGBA` value, a rune, a position (x and y) and a color (r, g and b) and draws a letter at that position in the image. The letters are 6x6, with the exception of `*`, which is weird.
+
+* The `cmd/scaled` example outputs an image where each "pixel" of the font is 4x4 pixels.
+* The `cmd/letters` example outputs an image where each pixel is a pixel.
+
+## Generating an image
+
+The `scaled` utility can be built and run like this:
+
+    cd cmd/scaled
+    go build
+    ./scaled > letters.png
+
+## General info
+
+License: MIT
+Version: 1.0.0
+Author: Alexander F. Rødseth &lt;xyproto@archlinux.org&gt;
