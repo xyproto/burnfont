@@ -10,7 +10,7 @@ Here is the same image, but scaled up 4x:
 
 ![scaled](img/scaled.png)
 
-The font is a bit nostalgic to me, and was used in my small DOS drawing program name *Burn*, that looked like this:
+The font is a bit nostalgic to me, and was used in my small DOS drawing program named *Burn*, that looked like this:
 
 ![burn screenshot](img/burn.png)
 
