@@ -10,11 +10,10 @@ Here is the same image, but scaled up 4x:
 
 ![scaled](img/scaled.png)
 
-The font is a bit nostalgic to me, and was used in my small DOS drawing program named *Burn*, that looked like this:
+The font is a bit nostalgic to me, and was used in my small DOS drawing program named *Burn*. The palette that came with *Burn* is [available here](https://github.com/xyproto/burnpalette). The GUI was drawn with 320x200 pixels, 256 indexed colors (`mode 13h`), and looked like this:
 
 ![burn screenshot](img/burn.png)
 
-(The palette that came with *Burn* is [available here](https://github.com/xyproto/burnpalette)).
 
 The font definition looks like this:
 
