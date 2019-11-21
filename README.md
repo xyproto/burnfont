@@ -1,6 +1,6 @@
-# burnfont [![GoDoc](https://godoc.org/github.com/xyproto/burnfont?status.svg)](http://godoc.org/github.com/xyproto/burnfont) [![Go Report Card](https://goreportcard.com/badge/github.com/xyproto/burnfont)](https://goreportcard.com/report/github.com/xyproto/burnfont)
+# burnfont [![Build Status](https://travis-ci.com/xyproto/burnfont.svg?branch=master)](https://travis-ci.com/xyproto/burnfont) [![Go Report Card](https://goreportcard.com/badge/github.com/xyproto/burnfont)](https://goreportcard.com/report/github.com/xyproto/burnfont) [![GoDoc](https://godoc.org/github.com/xyproto/burnfont?status.svg)](https://godoc.org/github.com/xyproto/burnfont)
 
-This is a hand-crafted 6x6 pixel font, defined by code, created in 1997.
+This is a hand-crafted 6x6 pixel font, defined by code, originally created in 1997.
 
 Here is a generated image with all available letters in this font:
 
@@ -47,5 +47,5 @@ The `scaled` utility can be built and run like this:
 ## General information
 
 * License: MIT
-* Version: 1.0.0
+* Version: 1.1.0
 * Author: Alexander F. Rødseth &lt;xyproto@archlinux.org&gt;
