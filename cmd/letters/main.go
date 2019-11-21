@@ -3,12 +3,13 @@ package main
 import (
 	"flag"
 	"fmt"
-	"github.com/xyproto/burnfont"
 	"image"
 	"image/color"
 	"image/draw"
 	"image/png"
 	"os"
+
+	"github.com/xyproto/burnfont"
 )
 
 // Output an image of a red "a"
@@ -47,7 +48,7 @@ func main() {
 	}
 
 	w := 104
-	h := 56
+	h := 8 * 8
 
 	// Create a gray image
 	grayImage := image.NewRGBA(image.Rect(0, 0, w, h))
