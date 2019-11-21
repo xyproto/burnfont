@@ -4,12 +4,14 @@ import (
 	"flag"
 	"fmt"
 	"github.com/xyproto/burnfont"
-	"golang.org/x/image/draw"
 	"image"
 	"image/color"
+	"image/draw"
 	"image/png"
 	"os"
 )
+
+// Output an image of a red "a"
 
 func main() {
 
@@ -24,7 +26,7 @@ func main() {
 	flag.Parse()
 
 	if version {
-		fmt.Println("scaled 0.0.1")
+		fmt.Println("string 0.0.1")
 		os.Exit(0)
 	}
 
@@ -46,10 +48,9 @@ func main() {
 
 	w := 104
 	h := 56
-	scale := 4
 
 	// Create a gray image
-	grayImage := image.NewRGBA(image.Rect(0, 0, w*scale, h*scale))
+	grayImage := image.NewRGBA(image.Rect(0, 0, w, h))
 
 	gray := color.RGBA{128, 128, 128, 255}
 	draw.Draw(grayImage, grayImage.Bounds(), &image.Uniform{gray}, image.ZP, draw.Src)
@@ -57,31 +58,11 @@ func main() {
 	// Create an image where the text will be drawn
 	m := image.NewRGBA(image.Rect(0, 0, w, h))
 
-	var (
-		r byte = 255
-		g byte
-		b byte
-		i int
-	)
-	alen := len(burnfont.Available)
-OUT:
-	for y := 0; y < 100; y += 8 {
-		for x := 0; x < 100; x += 8 {
-			// Convert the image to only use the given palette
-			l := burnfont.Available[i]
-			if err = burnfont.Draw(m, l, x, y, r, g, b); err != nil {
-				fmt.Fprintf(os.Stderr, "error: %s\n", err)
-				os.Exit(1)
-			}
-			i++
-			if i >= alen {
-				break OUT
-			}
-		}
-	}
+	// Draw a string
+	burnfont.DrawString(m, 0, 0, "HELLO", color.NRGBA{0, 0, 0, 255})
 
 	// Draw the text image on top of the gray image
-	draw.NearestNeighbor.Scale(grayImage, grayImage.Bounds(), m, m.Bounds(), draw.Over, nil)
+	draw.Draw(grayImage, grayImage.Bounds(), m, m.Bounds().Min, draw.Over)
 
 	// Output the grayImage, with the text overlay
 	if err := png.Encode(f, grayImage); err != nil {

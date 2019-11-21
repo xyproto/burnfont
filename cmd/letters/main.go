@@ -20,7 +20,7 @@ func main() {
 		version        bool
 	)
 
-	flag.StringVar(&outputFilename, "o", "-", "output PNG filename")
+	flag.StringVar(&outputFilename, "o", "out.png", "output PNG filename")
 	flag.BoolVar(&version, "v", false, "version")
 
 	flag.Parse()
