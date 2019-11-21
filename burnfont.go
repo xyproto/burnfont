@@ -3,24 +3,28 @@ package burnfont
 import (
 	"errors"
 	"fmt"
-	"image"
 	"image/color"
 )
 
 // Available is a slice with all available runes, for this package
 var Available = []rune{'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'Æ', 'Ø', 'Å', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'æ', 'ø', 'å', '.', ';', ',', '\'', '"', '*', '+', '!', '?', '-', '=', '_', '/', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '(', ')', '→'}
 
+// Drawable is an interface for anything that has a Set function, for drawing
+type Drawable interface {
+	Set(x, y int, c color.Color)
+}
+
 // Draw will draw an image of the selected rune at (x,y).
 // If the rune is not available, an error will be returned.
 // r,g,b is the main color of the rune.
-func Draw(m *image.RGBA, l rune, x, y int, r, g, b byte) error {
+func Draw(d Drawable, l rune, x, y int, r, g, b byte) error {
 
 	fontLine := func(s string, x, y int) {
 		for _, l := range s {
 			if l == '*' {
-				m.Set(x, y, color.NRGBA{r, g, b, 255})
+				d.Set(x, y, color.NRGBA{r, g, b, 255})
 			} else if l == '-' {
-				m.Set(x, y, color.NRGBA{r, g, b, 64})
+				d.Set(x, y, color.NRGBA{r, g, b, 64})
 			}
 			x++
 		}
@@ -568,4 +572,13 @@ func Draw(m *image.RGBA, l rune, x, y int, r, g, b byte) error {
 		return fmt.Errorf("rune %s is not available", string(l))
 	}
 	return nil
+}
+
+// DrawString draws the given string using this font
+func DrawString(d Drawable, x, y int, s string, c color.NRGBA) int {
+	for _, r := range s {
+		Draw(d, r, x, y, c.R, c.G, c.B)
+		x += 8
+	}
+	return x
 }
