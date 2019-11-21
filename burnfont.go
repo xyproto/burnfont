@@ -448,13 +448,15 @@ func Draw(d Drawable, l rune, x, y int, r, g, b byte) error {
 		fontLine("-*-", x+3, y+3)
 		fontLine("-*-", x+2, y+4)
 	case '*':
-		fontLine("--- ", x+1, y+2)
-		fontLine("-*- ", x+1, y+3)
-		fontLine("---", x+1, y+4)
+		fontLine("* *", x+2, y+1)
+		fontLine(" *", x+2, y+2)
+		fontLine("* *", x+2, y+3)
 	case '+':
-		fontLine(" -*- ", x, y+2)
-		fontLine("-***-", x, y+3)
-		fontLine(" -*- ", x, y+4)
+		fontLine("  *", x, y)
+		fontLine("  *", x, y+1)
+		fontLine("*****", x, y+2)
+		fontLine("  *", x, y+3)
+		fontLine("  *", x, y+4)
 	case '!':
 		fontLine("**", x+1, y)
 		fontLine("-**-", x, y+1)
