@@ -611,11 +611,11 @@ func Draw(d Drawable, l rune, x, y int, r, g, b byte) error {
 		fontLine("-*", x+3, y+4)
 		fontLine("-*", x+2, y+5)
 	case '&':
-		fontLine(" **    ", x, y)
-		fontLine("** *  *", x, y+1)
+		fontLine(" **", x, y)
+		fontLine("** *", x, y+1)
 		fontLine(" **  *", x, y+2)
-		fontLine(" **-* ", x, y+3)
-		fontLine("*  ** ", x, y+4)
+		fontLine(" **-*", x, y+3)
+		fontLine("*  **", x, y+4)
 		fontLine(" ** **", x, y+5)
 	case '|':
 		fontLine("*", x+3, y)
@@ -625,11 +625,11 @@ func Draw(d Drawable, l rune, x, y int, r, g, b byte) error {
 		fontLine("*", x+3, y+4)
 		fontLine("*", x+3, y+5)
 	case '\\':
-		fontLine("*", x, y+1)
-		fontLine("-*", x+1, y+2)
-		fontLine("-*", x+2, y+3)
-		fontLine("-*", x+3, y+4)
-		fontLine("-*", x+4, y+5)
+		fontLine("**", x+1, y+1)
+		fontLine("-**", x+1, y+2)
+		fontLine("-**", x+2, y+3)
+		fontLine("-**", x+3, y+4)
+		fontLine("-**", x+4, y+5)
 
 	case 0:
 		return errors.New("the rune was 0. Did you pass a coordinate instead of a rune?")
