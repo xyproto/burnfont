@@ -42,7 +42,7 @@ The `scaled` utility can be built and run like this:
 
     cd cmd/scaled
     go build
-    ./scaled > letters.png
+    ./scaled
 
 ## General information
 
