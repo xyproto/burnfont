@@ -45,7 +45,7 @@ func main() {
 	}
 
 	w := 104
-	h := 56
+	h := 64
 	scale := 4
 
 	// Create a gray image
