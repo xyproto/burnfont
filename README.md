@@ -27,7 +27,7 @@ case 'k':
 	fontLine("*** **", x, y+5)
 ```
 
-`*` is an opaque pixel, while `-` is a 25% transparent one.
+`*` is a 100% opaque pixel, while `-` is a 25% opaque one (mostly transparent).
 
 ## Contents
 
