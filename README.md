@@ -35,6 +35,7 @@ This Go package has a slice `Available` that lists all available runes. There is
 
 * The `cmd/scaled` example outputs an image where each "pixel" of the font is 4x4 pixels.
 * The `cmd/letters` example outputs an image where each pixel is a pixel.
+* The `cmd/txt2png` example can render text as a PNG image.
 
 ## Generating an image
 
