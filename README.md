@@ -1,4 +1,4 @@
-# burnfont [![Build Status](https://travis-ci.com/xyproto/burnfont.svg?branch=master)](https://travis-ci.com/xyproto/burnfont) [![Go Report Card](https://goreportcard.com/badge/github.com/xyproto/burnfont)](https://goreportcard.com/report/github.com/xyproto/burnfont) [![GoDoc](https://godoc.org/github.com/xyproto/burnfont?status.svg)](https://godoc.org/github.com/xyproto/burnfont)
+# burnfont ![Build](https://github.com/xyproto/burnfont/workflows/Build/badge.svg) [![Go Report Card](https://goreportcard.com/badge/github.com/xyproto/burnfont)](https://goreportcard.com/report/github.com/xyproto/burnfont) [![License](https://img.shields.io/badge/license-BSD-green.svg?style=flat)](https://raw.githubusercontent.com/xyproto/burnfont/main/LICENSE) [![GoDoc](https://godoc.org/github.com/xyproto/burnfont?status.svg)](https://godoc.org/github.com/xyproto/burnfont)
 
 This is a hand-crafted 6x6 pixel font, defined by code, originally created in 1997.
 
@@ -19,12 +19,12 @@ The font definition looks like this:
 
 ```go
 case 'k':
-	fontLine("***", x, y)
-	fontLine("-**", x, y+1)
-	fontLine("**-**", x+1, y+2)
-	fontLine("****-", x+1, y+3)
-	fontLine("-**-**", x, y+4)
-	fontLine("*** **", x, y+5)
+    fontLine("***", x, y)
+    fontLine("-**", x, y+1)
+    fontLine("**-**", x+1, y+2)
+    fontLine("****-", x+1, y+3)
+    fontLine("-**-**", x, y+4)
+    fontLine("*** **", x, y+5)
 ```
 
 `*` is a 100% opaque pixel, while `-` is a 25% opaque one (mostly transparent).
