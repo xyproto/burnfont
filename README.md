@@ -6,9 +6,9 @@ Here is a generated image with all available letters in this font:
 
 ![letters](img/letters.png)
 
-Here is the same image, but scaled up 4x:
+Here is the same image, but scaled up 4x and changed to black/white/gray:
 
-![scaled](img/scaled.png)
+![scaled](img/burnfont_example_bw.png)
 
 The font is a bit nostalgic to me, and was used in my small DOS drawing program named *Burn*. The palette that came with *Burn* is [available here](https://github.com/xyproto/burnpalette). The GUI was drawn with 320x200 pixels, 256 indexed colors (`mode 13h`), and looked like this:
 
