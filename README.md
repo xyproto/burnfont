@@ -1,4 +1,4 @@
-# burnfont ![Build](https://github.com/xyproto/burnfont/workflows/Build/badge.svg) [![Go Report Card](https://goreportcard.com/badge/github.com/xyproto/burnfont)](https://goreportcard.com/report/github.com/xyproto/burnfont) [![License](https://img.shields.io/badge/license-BSD-green.svg?style=flat)](https://raw.githubusercontent.com/xyproto/burnfont/main/LICENSE) [![GoDoc](https://godoc.org/github.com/xyproto/burnfont?status.svg)](https://godoc.org/github.com/xyproto/burnfont)
+# burnfont ![Build](https://github.com/xyproto/burnfont/workflows/Build/badge.svg) [![License](https://img.shields.io/badge/license-BSD-green.svg?style=flat)](https://raw.githubusercontent.com/xyproto/burnfont/main/LICENSE) [![GoDoc](https://godoc.org/github.com/xyproto/burnfont?status.svg)](https://godoc.org/github.com/xyproto/burnfont)
 
 This is a hand-crafted 6x6 pixel font, defined by code, originally created in 1997.
 
