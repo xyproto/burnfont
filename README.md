@@ -33,17 +33,17 @@ case 'k':
 
 This Go package has a slice `Available` that lists all available runes. There is also a `Draw` function that takes an `*image.RGBA` value, a rune, a position (x and y) and a color (r, g and b) and draws a letter at that position in the image.
 
-* The `cmd/scaled` example outputs an image where each "pixel" of the font is 4x4 pixels.
-* The `cmd/letters` example outputs an image where each pixel is a pixel.
+* The `cmd/letter` example outputs an image where each pixel is a pixel.
+* The `cmd/letter4x` example outputs an image where each "pixel" of the font is 4x4 pixels.
 * The `cmd/txt2png` example can render text as a PNG image.
 
 ## Generating an image
 
-The `scaled` utility can be built and run like this:
+The `letter4x` utility can be built and run like this:
 
-    cd cmd/scaled
+    cd cmd/letter4x
     go build
-    ./scaled
+    ./letter4x
 
 ## General information
 
