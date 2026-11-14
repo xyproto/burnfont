@@ -6,7 +6,7 @@ Here is a generated image with all available letters in this font:
 
 ![letters](img/letters.png)
 
-Here is the same image, but scaled up 4x and changed to black/white/gray:
+Here is the same image, but scaled up 4x and changed to black/gray/white:
 
 ![scaled](img/burnfont_example_bw.png)
 
