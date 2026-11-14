@@ -47,6 +47,6 @@ The `letter4x` utility can be built and run like this:
 
 ## General information
 
-* License: MIT
+* License: BSD-3
 * Version: 1.2.2
 * Author: Alexander F. Rødseth &lt;xyproto@archlinux.org&gt;
